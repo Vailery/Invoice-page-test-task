@@ -1,0 +1,134 @@
+:root {
+  --body-color: #f7fafc;
+  --header-color: #585a5c;
+  --badge-color: #bb5504;
+  --badge-bg-color: #ffde92;
+  --footer-color: rgba(26, 26, 26, 0.5);
+  --footer-border-color: hsla(0, 0%, 10%, 0.1);
+  --footer-link-color: hsla(0, 0%, 10%, 0.4);
+
+  --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", "Ubuntu", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: var(--main-font);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 443px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  color: var(--header-color);
+}
+
+.header__logo,
+.header__badge {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.header__logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+.header__logo-info {
+  margin-left: 12px;
+}
+
+.header__badge-info {
+  background-color: var(--badge-bg-color);
+  padding: 2px 4px;
+  border-radius: 4px;
+
+  color: var(--badge-color);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 14.3px;
+}
+
+/* .main{} */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+
+  color: var(--footer-color);
+  font-size: 12px;
+}
+
+.footer__info {
+  padding: 4px;
+}
+
+.footer__info a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer__info img {
+  margin-left: 3px;
+}
+
+.footer__links {
+  display: flex;
+  gap: 12px;
+  padding: 4px;
+}
+
+.footer__links-item {
+  list-style-type: none;
+}
+
+.footer__links-item a:hover {
+  text-decoration: underline dotted 1.5px var(--footer-link-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+  }
+
+  .footer__info {
+    padding: 0;
+    padding-right: 16px;
+    border-right: 1px solid var(--footer-border-color);
+  }
+
+  .footer__links {
+    padding: 0;
+    padding-left: 16px;
+  }
+}
