@@ -3,64 +3,292 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="assets/img/powdur-logo.png"
       type="image/png"
     />
 
-    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Уплатить поставщику Powdur по счету №66B42E22-0001</title>
+    <title>Pay Powdur Invoice #66B42E22-0001</title>
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
-        <div class="header__logo">
-          <img
-            class="header__logo-img"
-            src="assets/img/powdur-logo.png"
-            alt="logo of company"
-          />
+    <div class="wrapper">
+      <div class="container">
+        <header class="header">
+          <div class="header__logo">
+            <img
+              class="header__logo-img"
+              src="assets/img/powdur-logo.png"
+              alt="logo of company"
+            />
 
-          <p class="header__logo-info">Powdur</p>
-        </div>
+            <p class="header__logo-info">Powdur</p>
+          </div>
 
-        <div class="header__badge">
-          <span class="header__badge-info">тестовый режим</span>
-        </div>
-      </header>
+          <div class="header__badge">
+            <span class="header__badge-info">test mode</span>
+          </div>
+        </header>
 
-      <main class="main"></main>
+        <main class="main">
+          <div class="main__block">
+            <div class="main__block-bill">
+              <div class="main__block-bill-info">
+                <h1>$4,450.95</h1>
 
-      <footer class="footer">
-        <div class="footer__info">
-          <a href="https://stripe.com/invoices" target="_blank"
-            >На платформе <img src="assets/svg/stripe.svg" alt="stripe"
-          /></a>
-        </div>
+                <span>Due April 4, 2024</span>
+              </div>
 
-        <ul class="footer__links">
-          <li class="footer__links-item">
-            <a
-              href="https://stripe.com/legal/ach-payments/authorization"
-              target="_blank"
-              >Условия</a
-            >
-          </li>
+              <a
+                class="main__block-bill-download"
+                href="assets/files/Invoice-66B42E22-0001.pdf"
+                download
+              >
+                <img src="assets/svg/document.svg" alt="document" />
 
-          <li class="footer__links-item">
-            <a href="https://stripe.com/privacy" target="_blank"
-              >Конфиденциальность</a
-            >
-          </li>
-        </ul>
-      </footer>
+                <p class="download-invoice">
+                  <img
+                    class="document-image"
+                    src="assets/svg/arrow.svg"
+                    alt="arrow"
+                  />
+
+                  <span class="invoice-message">&nbsp;Invoice</span>
+                </p>
+              </a>
+            </div>
+
+            <div class="main__block-info">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>To</td>
+                    <td>Megan Smith</td>
+                  </tr>
+
+                  <tr>
+                    <td>From</td>
+                    <td>Powdur</td>
+                  </tr>
+
+                  <tr>
+                    <td>Invoice</td>
+                    <td>№ 66B42E22-0001</td>
+                  </tr>
+
+                  <tr>
+                    <td>Memo</td>
+                    <td>
+                      This is a demo hosted invoice. Click the pay button to
+                      test pay this invoice.
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+
+                    <td>
+                      <button class="invoice-details">
+                        <span id="invoice-details-info"
+                          >View invoice and payment details</span
+                        >
+
+                        <img
+                          id="rightArrowSideBar"
+                          src="assets/svg/right-arrow.svg"
+                          alt="right-arrow"
+                        />
+
+                        <img
+                          id="closeSidebar"
+                          src="assets/svg/close.svg"
+                          alt="close"
+                        />
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="main__block mark">
+            <button class="link">
+              Pay with
+              <img src="assets/svg/link.svg" alt="link" />
+              <img src="assets/svg/link-arrow.svg" alt="link arrow" />
+            </button>
+
+            <div class="divider">
+              <hr />
+              <p class="divider-text">Or pay another way</p>
+            </div>
+
+            <div class="payment">
+              <div class="payment-method">
+                <p class="payment-method-item">
+                  <img src="assets/svg/card.svg" alt="card" />
+                  Card
+                </p>
+
+                <p class="payment-method-item">
+                  <img src="assets/svg/app-pay.svg" alt="app pay" />
+                  Cash App <br />
+                  Pay
+                </p>
+
+                <p class="payment-method-item">
+                  <img src="assets/svg/bank.svg" alt="bank" />
+                  Bank <br />
+                  Transfer
+                </p>
+
+                <p class="payment-method-item">
+                  <img src="assets/svg/wechat.svg" alt="wechat" />
+                  <img src="assets/svg/right-arrow.svg" alt="down arrow" />
+                </p>
+              </div>
+
+              <p class="payment-info">
+                Bank transfers, also known as ACH payments, can take up to five
+                business days. To pay via ACH, transfer funds using the
+                following bank information.
+              </p>
+
+              <div class="bank-info">
+                <p>Bank information</p>
+
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Bank name</td>
+                      <td>TEST BANK</td>
+                    </tr>
+
+                    <tr>
+                      <td>Routing number</td>
+                      <td>110000000</td>
+                    </tr>
+
+                    <tr>
+                      <td>Account number</td>
+                      <td>test_52796e3294dc</td>
+                    </tr>
+
+                    <tr>
+                      <td>SWIFT code</td>
+                      <td>TSTEZ122</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer">
+          <div class="footer__info">
+            <a href="https://stripe.com/invoices" target="_blank"
+              >Powered by <img src="assets/svg/stripe.svg" alt="stripe"
+            /></a>
+          </div>
+
+          <ul class="footer__links">
+            <li class="footer__links-item">
+              <a
+                href="https://stripe.com/legal/ach-payments/authorization"
+                target="_blank"
+                >Terms</a
+              >
+            </li>
+
+            <li class="footer__links-item">
+              <a href="https://stripe.com/privacy" target="_blank">Privacy</a>
+            </li>
+          </ul>
+        </footer>
+      </div>
     </div>
+
+    <nav class="payment__details">
+      <button class="invoice-details">
+        <img id="closeSidebar" src="assets/svg/close.svg" alt="close" />
+        Close invoice and payment details
+      </button>
+
+      <div class="payment__details-info">
+        <h1>$4,450.95</h1>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>Enterprise Plan <span>Qty 4</span></td>
+              <td>$3,996.00 <span>$999.00 each</span></td>
+            </tr>
+
+            <tr>
+              <td>Set up fee <span>Qty 4</span></td>
+              <td>$400.00 <span>$100.00 each</span></td>
+            </tr>
+
+            <tr>
+              <td>Subtotal</td>
+              <td>$4,396.00</td>
+            </tr>
+
+            <tr>
+              <td>Ten percent off (10% off)</td>
+              <td>-$439.60</td>
+            </tr>
+
+            <tr>
+              <td>Total excluding tax</td>
+              <td>$3,956.40</td>
+            </tr>
+
+            <tr>
+              <td>Tax (12.5%)</td>
+              <td>$494.55</td>
+            </tr>
+
+            <tr>
+              <td>Total due</td>
+              <td>$4,450.95</td>
+            </tr>
+
+            <tr>
+              <td>Amount paid</td>
+              <td>$0.00</td>
+            </tr>
+
+            <tr>
+              <td>Amount remaining</td>
+              <td>$4,450.95</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="contact_details">
+        <a href="mailto:contact@stripe.com"
+          ><img src="assets/svg/email.svg" alt="email" />contact@stripe.com</a
+        >
+        <a href="tel:+14155555555"
+          ><img src="assets/svg/telephone.svg" alt="telephone" />+14155555555</a
+        >
+      </div>
+
+      <div class="contact_info">
+        Questions?&nbsp; <button class="contact_powdur">Contact Powdur</button>
+      </div>
+    </nav>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
