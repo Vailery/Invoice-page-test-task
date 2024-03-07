@@ -57,35 +57,35 @@ const setupDownloadAnimations = () => {
   };
 };
 
-const setupContactPowdur = () => {
-  const contactPowdurMessage = document
-    .getElementsByClassName("contact_powdur")
+const setupContactReconcillio = () => {
+  const contactReconcillioMessage = document
+    .getElementsByClassName("contact_reconcillio")
     .item(0);
 
-  const powdurContactsBlock = document
+  const reconcillioContactsBlock = document
     .getElementsByClassName("contact_details")
     .item(0);
 
-  let powdurContactsVisible = false;
+  let reconcillioContactsVisible = false;
 
   const updateBlockVisibility = (visible) => {
     if (visible) {
-      powdurContactsBlock.style.opacity = "1";
-      powdurContactsBlock.style.pointerEvents = "all";
+      reconcillioContactsBlock.style.opacity = "1";
+      reconcillioContactsBlock.style.pointerEvents = "all";
     } else {
-      powdurContactsBlock.style.opacity = "0";
-      powdurContactsBlock.style.pointerEvents = "none";
+      reconcillioContactsBlock.style.opacity = "0";
+      reconcillioContactsBlock.style.pointerEvents = "none";
     }
   };
 
-  contactPowdurMessage.onclick = () => {
-    powdurContactsVisible = !powdurContactsVisible;
-    updateBlockVisibility(powdurContactsVisible);
+  contactReconcillioMessage.onclick = () => {
+    reconcillioContactsVisible = !reconcillioContactsVisible;
+    updateBlockVisibility(reconcillioContactsVisible);
   };
 };
 
 window.onload = () => {
   setupDownloadAnimations();
   setupSidebar();
-  setupContactPowdur();
+  setupContactReconcillio();
 };
